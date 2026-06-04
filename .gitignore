@@ -1,0 +1,16 @@
+# Utility scripts (not part of the site)
+recover.py
+replay.py
+replace.py
+fix_html.py
+debug.py
+rewrite.py
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+*.code-workspace
