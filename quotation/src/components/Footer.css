@@ -1,0 +1,43 @@
+.footer-section {
+  padding: 8rem 0 4rem;
+  background-color: transparent;
+  border-top: 1px dashed var(--border);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-cta {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+.footer-button {
+  display: inline-block;
+  background-color: var(--surface);
+  color: var(--accent);
+  border: 1px dashed var(--accent);
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.footer-bottom {
+  margin-top: 6rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}

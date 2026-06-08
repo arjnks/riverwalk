@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --bg: #0B1F3A; /* Blueprint Blue */
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --accent: #00FFFF; /* Cyan */
+  --surface: rgba(11, 31, 58, 0.8);
+  --border: rgba(0, 255, 255, 0.3);
+  --grid-line: rgba(255, 255, 255, 0.05);
+  --grid-line-thick: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  letter-spacing: -0.02em;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+a, button {
+  cursor: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 8rem 0;
+  position: relative;
+}
+
+/* Blueprint Grid & CRT Background */
+.ambient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  background-image: 
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(var(--grid-line-thick) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-thick) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Utility classes */
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+  border: 1px dashed var(--border);
+  backdrop-filter: blur(4px);
+}
+
+/* Schematic corner brackets */
+.schematic-box {
+  position: relative;
+}
+
+.schematic-box::before,
+.schematic-box::after {
+  content: '+';
+  position: absolute;
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.schematic-box::before {
+  top: -10px;
+  left: -8px;
+}
+
+.schematic-box::after {
+  bottom: -10px;
+  right: -8px;
+}
