@@ -85,7 +85,7 @@ export const Packages = () => {
                 <li className="feature-item">
                   <span className="feature-icon"><Terminal size={14} /></span>
                   <span className="feature-name">WEB_MODULE (PKG_01)</span>
-                  <span className="feature-value">₹42,000</span>
+                  <span className="feature-value">₹42,000(one time payment)</span>
                 </li>
                 
                 <li className="feature-divider">SOCIAL_OPTIONS</li>
